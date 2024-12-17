@@ -1,0 +1,295 @@
+General Page Styling
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle, #0b0f1a, #060916);
+    color: #ffffff;
+    cursor: none;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Stargazing Page Banner */
+.stargazing-page-banner {
+    width: 100%;
+    text-align: center;
+    padding: 3rem 1rem;
+    padding-bottom: 0.5rem;
+    background: url("../image/download.png");
+    animation: twinkle 50s infinite linear;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+@keyframes twinkle {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+.stargazing-page-banner h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.stargazing-page-banner p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* Stargazing Page Layout */
+.stargazing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Page Container */
+.StargazingEvent-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    width: 100%;
+    height: auto;
+    background: url("../image/download.png");
+    animation: twinkle 50s infinite linear;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Dark Overlay for Better Text Visibility */
+.StargazingEvent-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Event Card Styling */
+.StargazingEvent-card {
+    display: flex;
+    background: #12192c;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    width: 80%;
+    max-width: 800px;
+    color: #fff;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.StargazingEvent-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+.StargazingEvent-card-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px 0 0 12px;
+    padding: 5px;
+}
+
+.StargazingEvent-card-details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.StargazingEvent-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.StargazingEvent-description {
+    font-size: 1rem;
+    color: #b0c4de;
+    margin-bottom: 1rem;
+}
+
+.StargazingEvent-date {
+    font-size: 0.9rem;
+    color: #d1d5db;
+}
+
+/* Highlight Upcoming Events */
+.StargazingEvent-card.upcoming {
+    border: 2px solid #00bcd4;
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+}
+
+/* Enhanced Anchor Tag */
+.StargazingEvent-card a {
+    display: inline-block;
+    color: #00bcd4;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.StargazingEvent-card a:hover {
+    color: #ffffff;
+    border-bottom: 2px solid #00bcd4;
+}
+
+.StargazingEvent-card a:focus {
+    outline: none;
+    border-bottom: 2px solid #ffffff;
+}
+
+.StargazingEvent-card a:active {
+    transform: scale(0.98);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Cursor Trail Styling */
+.StargazingEvent-cursor-trail {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #b8e4ff;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: 0 0 8px 4px rgba(184, 228, 255, 0.7);
+    transition: transform 0.1s ease;
+    transform: translate(-50%, -50%);
+    animation: pulse 1.5s infinite ease-in-out;
+    z-index: 9999;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Adjustments */
+
+/* Tablet View */
+@media (max-width: 768px) {
+    .stargazing-page-banner h1 {
+        font-size: 2rem;
+    }
+
+    .StargazingEvent-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .StargazingEvent-card-image img {
+        width: 100%;
+        height: 150px;
+        border-radius: 12px 12px 0 0;
+    }
+
+    .StargazingEvent-card-details {
+        text-align: center;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+    .stargazing-page-banner h1 {
+        font-size: 1.5rem;
+    }
+
+    .stargazing-page-banner p {
+        font-size: 1rem;
+    }
+
+    .StargazingEvent-card {
+        width: 90%;
+    }
+
+    .StargazingEvent-title {
+        font-size: 1.2rem;
+    }
+
+    .StargazingEvent-description {
+        font-size: 0.9rem;
+    }
+
+    .StargazingEvent-date {
+        font-size: 0.8rem;
+    }
+}
+
+/* Define the keyframes for expand and contract */
+@keyframes expandContract {
+    0%, 100% {
+        transform: scale(0.9);
+    }
+    50% {
+        transform: scale(1.1); 
+    }
+}
+/* Expandable animation */
+.StargazingEvent-card.expandable {
+    animation: expandContract 8s infinite; /* Adjust duration as needed */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ffd700; /* Highlight the active event with gold */
+}
+
+/* Stargazing Page Banner Styling */
+.stargazing-page-banner {
+    width: 100%;
+    text-align: center;
+    padding: 3rem 1rem;
+    padding-bottom: 0.5rem;
+    background: url("../image/download.png");
+    animation: twinkle 50s infinite linear;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+.stargazing-return-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: #00bcd4;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+
+.stargazing-return-btn:hover {
+    background-color: #008c9e;
+    transform: scale(1.1);
+}
+
+.stargazing-return-btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.8);
+}

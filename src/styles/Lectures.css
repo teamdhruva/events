@@ -1,0 +1,223 @@
+/* General Page Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle, #0b0f1a, #060916);
+  color: #ffffff;
+  cursor: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Page Banner */
+.lectures-page-banner {
+  width: 100%;
+  text-align: center;
+  padding: 3rem 1rem 0.5rem;
+  background: url("../image/download.png");
+  animation: twinkle 50s infinite linear;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes twinkle {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+.lectures-page-banner h1 {
+  font-size: clamp(2rem, 4vw, 3rem); /* Responsive font size */
+  margin: 0;
+}
+
+.lectures-page-banner p {
+  font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+  margin-top: 0.5rem;
+}
+
+/* Page Layout */
+.lectures-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.lectures-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  width: 100%;
+  background: url("../image/download.png");
+  animation: twinkle 50s infinite linear;
+}
+
+/* Card Styling */
+.lectures-card {
+  display: flex;
+  flex-direction: row;
+  background: #12192c;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 800px;
+  color: #fff;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lectures-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3);
+}
+
+.lectures-card-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px 0 0 12px;
+  padding: 5px;
+}
+
+.lectures-card-details {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lectures-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.lectures-description {
+  font-size: 1rem;
+  color: #b0c4de;
+  margin-bottom: 1rem;
+}
+
+.lectures-date {
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .lectures-page-banner h1 {
+    font-size: 2rem;
+  }
+
+  .lectures-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lectures-card-image img {
+    width: 100%;
+    height: 150px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .lectures-card-details {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .lectures-page-banner h1 {
+    font-size: 1.5rem;
+  }
+
+  .lectures-page-banner p {
+    font-size: 1rem;
+  }
+
+  .lectures-card {
+    width: 90%;
+  }
+
+  .lectures-title {
+    font-size: 1.2rem;
+  }
+
+  .lectures-description {
+    font-size: 0.9rem;
+  }
+
+  .lectures-date {
+    font-size: 0.8rem;
+  }
+}
+
+/* Cursor Trail */
+.lectures-cursor-trail {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #b8e4ff;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 8px 4px rgba(184, 228, 255, 0.7);
+  transition: transform 0.1s ease;
+  transform: translate(-50%, -50%);
+  animation: pulse 1.5s infinite ease-in-out;
+  z-index: 9999;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Anchor Tag Styling */
+.lectures-link {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.lectures-link:hover {
+  text-decoration: underline;
+}
+
+/* Return Button */
+.return-button {
+  padding: 10px 20px;
+  background-color: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.return-button:hover {
+  background-color: #0097a7;
+  transform: scale(1.05);
+}
+
+.return-button:active {
+  transform: scale(0.98);
+}
