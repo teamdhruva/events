@@ -100,6 +100,7 @@ html {
 }
 
 .StargazingEvent-card-image img {
+    width: 200px;
     object-fit: cover;
     border-radius: 12px 0 0 12px;
     padding: 5px;
@@ -113,6 +114,7 @@ html {
 }
 
 .StargazingEvent-title {
+    text-align: center;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
 }
@@ -202,7 +204,7 @@ html {
     }
 
     .StargazingEvent-card-image img {
-        height: 150px;
+        width: 96%;
         border-radius: 12px 12px 0 0;
     }
 
@@ -230,6 +232,7 @@ html {
     }
 
     .StargazingEvent-description {
+        text-align: left;
         font-size: 0.9rem;
     }
 
@@ -244,7 +247,7 @@ html {
         transform: scale(0.9);
     }
     50% {
-        transform: scale(1.1); 
+        transform: scale(1); 
     }
 }
 /* Expandable animation */
@@ -265,29 +268,4 @@ html {
     color: #ffffff;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
     position: relative;
-}
-
-.stargazing-return-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background-color: #00bcd4;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    text-decoration: none; /* Remove underline */
-}
-
-.stargazing-return-btn:hover {
-    background-color: #008c9e;
-    transform: scale(1.1);
-}
-
-.stargazing-return-btn:focus {
-    outline: none;
-    box-shadow: 0 0 10px rgba(0, 188, 212, 0.8);
 }

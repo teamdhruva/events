@@ -70,10 +70,10 @@ body {
 
 .card-content {
   padding: 1rem;
-  text-align: center;
 }
 
 .card-content h3 {
+  text-align: center;
   margin: 0;
   font-size: 1.2rem;
 }
@@ -86,7 +86,7 @@ body {
 
 .card-subtitle {
   font-size: 0.9rem;
-  color: #d1d5db; /* Light gray color */
+  color: #d1d5dbba; /* Light gray color */
   margin: 0.5rem 0;
 }
 
