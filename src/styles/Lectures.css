@@ -74,6 +74,7 @@ body {
   color: #fff;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center; 
 }
 
 .lectures-card:hover {
@@ -83,7 +84,6 @@ body {
 
 .lectures-card-image img {
   width: 200px;
-  height: 200px;
   object-fit: cover;
   border-radius: 12px 0 0 12px;
   padding: 5px;
@@ -220,4 +220,22 @@ body {
 
 .return-button:active {
   transform: scale(0.98);
+}
+
+/* Speaker Section Styling */
+.lectures-speaker {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: 0.5rem;
+}
+
+.lectures-speaker-link {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.lectures-speaker-link:hover {
+  color: #0097a7;
 }

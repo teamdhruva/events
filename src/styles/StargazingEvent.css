@@ -91,6 +91,7 @@ html {
     color: #fff;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-items: center; 
 }
 
 .StargazingEvent-card:hover {
@@ -100,7 +101,6 @@ html {
 
 .StargazingEvent-card-image img {
     width: 200px;
-    height: 200px;
     object-fit: cover;
     border-radius: 12px 0 0 12px;
     padding: 5px;
@@ -253,7 +253,7 @@ html {
 .StargazingEvent-card.expandable {
     animation: expandContract 8s infinite; /* Adjust duration as needed */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border: 2px solid #ffd700; /* Highlight the active event with gold */
+    border: 2px solid #ff0000; /* Highlight the active event with gold */
 }
 
 /* Stargazing Page Banner Styling */

@@ -27,7 +27,7 @@ const StargazingEvent = () => {
                        <img src={event.image} alt={event.title} />
                    </div>
                    <div className="StargazingEvent-card-details">
-                       {event.status && <span className="status-indicator">🌟 Live</span>}
+                       {event.status && <span className="status-indicator">🔴 Upcoming</span>}
                        <h3 className="StargazingEvent-title">{event.title}</h3>
                        <p className="StargazingEvent-description">
                            {event.description} 
