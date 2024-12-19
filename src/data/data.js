@@ -3,7 +3,7 @@ import lecture from '../image/lectures.jpeg'
 import stargazing from '../image/stargazing.jpeg'
 import workshop from '../image/workshops.jpeg'
 //Stargazing photos
-import stargazing1 from '../image/stargazing/Stargazing2.png'
+import stargazing1 from '../image/stargazing/Stargazing2.webp'
 import stargazing2 from '../image/stargazing/stargazing1.jpeg'
 //Lecture photos
 import Einstein from '../image/lectures/Einstein.jpg';
