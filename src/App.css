@@ -1,5 +1,17 @@
 /* General Page Styling */
-@import url('https://fonts.googleapis.com/css2?family=Proto+Mono&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Proto+Mono&display=swap'); */
+@font-face {
+  font-family: 'Proto Mono';
+  src: url('./fonts/ProtoMono-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proto Mono Semi';
+  src: url('./fonts/ProtoMono-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   margin: 0;
   padding: 0;

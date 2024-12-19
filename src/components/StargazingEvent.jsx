@@ -13,7 +13,7 @@ const StargazingEvent = () => {
     return (
         <div className="stargazing-page">
              <div className="stargazing-page-banner">
-                <h1>Stargazing Events</h1>
+                <h1>STARGAZING EVENTS</h1>
                 <p>Explore the wonders of the night sky with our exclusive stargazing events!</p>
             </div>
             <button className="return-button" onClick={handleReturn}>Return to Home</button> 

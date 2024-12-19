@@ -11,7 +11,7 @@ const Lectures = () => {
   return (
     <div className="lectures-page">
       <div className="lectures-page-banner">
-        <h1>Upcoming Lectures</h1>
+        <h1>LECTURES</h1>
         <p>Stay updated with our upcoming lectures on astronomy and space science.</p>
       </div>
       <button className="return-button" onClick={handleReturn}>Return to Home</button>
