@@ -15,7 +15,7 @@ export const events = [
       date: '2024-12-21',
       image: stargazing1, 
       link: 'https://youtube.com/@dhruva1910?si=c1b_pefdHGn3OC56',
-      status:'live',
+      status:'',
     },
     {
       title: 'STARGAZING SPECTACLES',
